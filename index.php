@@ -7,6 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style>
+        .btn-danger {
+            border-radius: 50%;
+            padding: 2px 12px 4px 12px;
+        }
+    </style>
+
     </head>
     <body>
          <div class='container mt-5'>
@@ -64,7 +71,7 @@
             <td>{$user['login']}</td>   
             <td>{$user['name']}</td>   
             <td>{$city}</td>  
-            <td>
+            <td class='text-center'>
                 <form method='post' action='del.user.php'>
                     <button class = 'btn btn-danger'>x</button>
                 </form>
