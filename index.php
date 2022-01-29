@@ -68,12 +68,18 @@
             echo "
         <tr>
             <td>{$user['id']}</td>             
-            <td>{$user['login']}</td>   
+            <td>{$user['login']}</td>  
+            <td>
+                <a href='pages/user.php?id={$user['id']}'>
+                    {$user['name']}
+                </a>
+            </td> 
             <td>{$user['name']}</td>   
             <td>{$city}</td>  
             <td class='text-center'>
-                <form method='post' action='del.user.php'>
-                    <button class = 'btn btn-danger'>x</button>
+                <form method='post' action='actions/del.user.php'>
+                    <input type = 'hidden' name = 'id' value='{$user['id']}'>
+                    <button type='submit' class = 'btn btn-danger'>x</button>
                 </form>
             </td>  
         </tr>
