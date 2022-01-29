@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $userId =  $_POST['id'];
 
 $user = 'root';
