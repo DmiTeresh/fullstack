@@ -4,7 +4,10 @@
 
 #require '../config.php'
 
-require $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+# echo dirname(__FILE__);
+
+$document_root = $_SERVER['DOCUMENT_ROOT'];
+require $document_root . '/config.php';
 
 # echo md5('123');
 

@@ -66,4 +66,7 @@ $cities = $res1->fetchAll();
 
         echo "<tbody>
 </table>"; 
+
+require_once '../../templates/footer.php';
+
 ?>

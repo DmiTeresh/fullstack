@@ -27,6 +27,8 @@ foreach ($links as $key => $link) {
 
 echo '<div>';
 
+require_once '../../templates/footer.php';
+
 ?>
 
 <!-- <a href="users.php">Список пользователей</a>
