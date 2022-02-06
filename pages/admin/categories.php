@@ -10,7 +10,7 @@ $categories = $res->fetchAll();
 
 ?>
 
-<form method="POST" action="../../actions/admin/createCategory.php">
+<form method="POST" action="/actions/admin/createCategory.php">
     <input class="form-control mb-2" name = 'name' placeholder="Наименование категорий">
     
     <textarea class="form-control mb-2" name = 'description' placeholder="Описание"></textarea> 
@@ -55,3 +55,7 @@ $categories = $res->fetchAll();
         ?>
     </tbody>
 </table>
+
+<?php
+
+require_once '../../templates/footer.php';
