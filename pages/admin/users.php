@@ -57,7 +57,7 @@ $cities = $res1->fetchAll();
             <td class='text-center'>
                 <form method='post' action='actions/del.user.php'>
                     <input type = 'hidden' name = 'id' value='{$user['id']}'>
-                    <button type='submit' class = 'btn btn-danger'>x</button>
+                    <button type='submit' class = 'btn btn-user-delete btn-danger'>x</button>
                 </form>
             </td>  
         </tr>

@@ -12,6 +12,7 @@ require $document_root . '/config.php';
 # echo md5('123');
 
 
+
 ?>
 
 
@@ -34,10 +35,44 @@ require $document_root . '/config.php';
     </title>
 
     <style>
-        .btn-danger {
+        .btn-user-delete {
             border-radius: 100%;
             padding: 2px 12px 4px 12px;
         }
+        .card-image  {
+            margin-top: 10px;
+            height: 180px;
+        }
+        .card-price {
+            text-align: center;
+            font-size: 23px;
+            border-bottom: 2px solid grey;
+        }
+        .card-image  img {
+            width: auto;
+            height: 100%;
+
+        }
+    
+       .btn-product-remove {
+            width: 37px;
+        }
+            
+        .btn-product-add {
+            width: 37px;
+        }
+            
+        .card-basket-buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+            
+        .card-basket-quantity {
+            line-height: 38px;
+
+        }
+
     </style>
 
     </head>
@@ -77,8 +112,17 @@ require $document_root . '/config.php';
                         </li>
 
                     <?php } else { ?>
-                    
-                        <li class="nav-item dropdown">
+                        
+                        <li class="nav-item">
+                        <a class="nav-link <?= ($_SERVER['PHP_SELF'] == '/pages/basket.php') ? 'active' : '' ?> " href="/pages/basket.php">
+                            Корзина ( <?= array_sum($_SESSION['products'] ?? []) ?> )
+                        </a>
+                        </li>
+
+
+
+                        
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?= $_SESSION['user']['login'] ?>
                         </a>
@@ -87,13 +131,13 @@ require $document_root . '/config.php';
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="/actions/logout.php">Выйти</a></li>
                         </ul>
-                        </li>
+                    </li>
 
                         <?php } ?> 
-                    </ul>
-                    </div>
+                </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
 
 
